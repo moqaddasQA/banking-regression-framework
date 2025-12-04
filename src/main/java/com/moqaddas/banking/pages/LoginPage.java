@@ -19,11 +19,11 @@ public class LoginPage extends BasePage<LoginPage> {
   }
 
   public AccountOverviewPage loginAs(String user, String pass) {
-    driver.findElement(USERNAME).clear();
+    waitForElement(USERNAME).clear();
     driver.findElement(USERNAME).sendKeys(user);
-    driver.findElement(PASSWORD).clear();
+    waitForElement(PASSWORD).clear();
     driver.findElement(PASSWORD).sendKeys(pass);
-    driver.findElement(LOGIN_BUTTON).click();
+    waitForClickable(LOGIN_BUTTON).click();
     return new AccountOverviewPage(driver);
   }
 

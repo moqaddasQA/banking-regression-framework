@@ -13,24 +13,25 @@ public class AccountOverviewPage extends BasePage<AccountOverviewPage> {
 
   public AccountOverviewPage(WebDriver driver) {
     super(driver);
+    // Wait is done in isLoaded() and tableVisible() methods
   }
 
   public boolean tableVisible() {
-    return driver.findElement(ACCOUNTS_TABLE).isDisplayed();
+    return waitForElement(ACCOUNTS_TABLE).isDisplayed();
   }
 
   public TransferFundsPage goToTransfers() {
-    driver.findElement(TRANSFER_FUNDS_LINK).click();
+    waitForClickable(TRANSFER_FUNDS_LINK).click();
     return new TransferFundsPage(driver);
   }
 
   public BillPayPage goToBillPay() {
-    driver.findElement(BILL_PAY_LINK).click();
+    waitForClickable(BILL_PAY_LINK).click();
     return new BillPayPage(driver);
   }
 
   @Override
   public boolean isLoaded() {
-    return driver.findElement(ACCOUNTS_TABLE).isDisplayed();
+    return waitForElement(ACCOUNTS_TABLE).isDisplayed();
   }
 }
