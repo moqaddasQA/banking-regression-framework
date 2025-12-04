@@ -17,7 +17,9 @@ public abstract class BaseTest {
   public void openBrowser() {
     driver = DriverFactory.createChrome();
     DriverManager.setDriver(driver);
-    driver.manage().window().maximize();
+    if (!ConfigManager.headless()) {
+      driver.manage().window().maximize();
+    }
     driver.get(ConfigManager.baseUrl());
   }
 

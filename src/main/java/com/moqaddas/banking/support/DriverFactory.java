@@ -13,6 +13,7 @@ public final class DriverFactory {
     ChromeOptions options = new ChromeOptions();
     options.addArguments("--remote-allow-origins=*");
     options.addArguments("--no-sandbox", "--disable-dev-shm-usage");
+    options.addArguments("--disable-blink-features=AutomationControlled");
     if (ConfigManager.headless()) {
       options.addArguments("--headless=new", "--disable-gpu", "--window-size=1920,1080");
     }
