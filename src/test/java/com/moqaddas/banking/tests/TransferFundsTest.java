@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 public class TransferFundsTest extends BaseTest {
 
   @Test(dataProvider = "transfers", dataProviderClass = CsvDataProvider.class)
-  public void transferSmoke(String fromAccount, String toAccount, String amount, String currency) {
+  public void transferSmoke(String fromAccount, String toAccount, String amount) {
     LoginPage login = new LoginPage(driver);
     AccountOverviewPage account = login.loginAs(ConfigManager.username(), ConfigManager.password());
     Assert.assertTrue(account.tableVisible(), "Account overview should be visible");

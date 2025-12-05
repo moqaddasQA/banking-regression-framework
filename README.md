@@ -16,7 +16,6 @@ Enterprise-grade test automation framework for banking applications built with S
 ✅ **UI Automation** - Comprehensive Selenium-based regression covering login, transfers, and bill pay workflows  
 ✅ **Data-Driven Testing** - CSV-based test data providers for scalable test scenarios  
 ✅ **Dual Reporting** - ExtentReports HTML dashboards + Allure test reports with screenshots  
-✅ **CI/CD Ready** - Jenkins pipeline with Docker Grid integration  
 ✅ **Thread-Safe Execution** - ThreadLocal WebDriver management for parallel execution  
 ✅ **Auto Screenshots** - Automatic failure evidence capture via TestNG listeners
 
@@ -24,33 +23,27 @@ Enterprise-grade test automation framework for banking applications built with S
 
 ```
 banking-regression-framework/
-├── data/                     # Test data (CSV files)
-│   ├── transfers.csv
-│   └── billpay.csv
-├── docs/                     # Architecture documentation
-├── scripts/                  # Helper scripts
-│   ├── grid-up.sh           # Selenium Grid startup
-│   └── report-upload.ps1    # Report upload automation
 ├── src/
 │   ├── main/java/com/moqaddas/banking/
-│   │   ├── data/            # CSV data providers
 │   │   ├── pages/           # Page Objects (Login, Transfer, BillPay)
 │   │   ├── reporting/       # ExtentManager, ScreenshotUtil
-│   │   └── support/         # ConfigManager, DriverFactory
+│   │   └── support/         # ConfigManager, DriverFactory, DriverManager
 │   └── test/
-│       ├── java/            # Test classes
-│       └── resources/       # TestNG suites, properties
-├── docker-compose.yml       # Grid + MySQL containers
-├── Jenkinsfile             # CI/CD pipeline
+│       ├── java/com/moqaddas/banking/
+│       │   ├── data/        # CSV DataProviders
+│       │   └── tests/       # Test classes
+│       └── resources/       
+│           ├── data/        # Test data (CSV files)
+│           ├── testng-smoke.xml
+│           └── testng-regression.xml
 └── pom.xml                 # Maven dependencies
 ```
 
 ## Quick Start
 
 ### Prerequisites
-- Java 17 or higher
+- Java 21 or higher
 - Maven 3.9+
-- Docker (optional, for Grid execution)
 
 ### Running Tests
 
@@ -72,7 +65,7 @@ mvn test -Dtest=LoginSmokeTest
 
 ### Configuration
 
-Edit `src/main/resources/framework.properties`:
+Edit `src/test/resources/framework.properties`:
 ```properties
 base.url=https://parabank.parasoft.com/
 user.name=demo
@@ -83,22 +76,6 @@ browser.headless=true
 Override via system properties:
 ```bash
 mvn test -Dbase.url=https://your-env.com -Duser.name=testuser
-```
-
-## Docker Grid (Optional)
-
-```bash
-# Start Selenium Grid + MySQL
-docker compose up -d
-
-# Run tests against Grid
-mvn test -Dselenium.grid.url=http://localhost:4444
-
-# View Grid console
-open http://localhost:4444
-
-# Teardown
-docker compose down
 ```
 
 ## Test Reports
@@ -118,17 +95,6 @@ mvn allure:serve
 - Test history and trends
 - Screenshot attachments
 
-## CI/CD Pipeline
-
-The `Jenkinsfile` orchestrates:
-1. **Checkout** - Clone repository
-2. **Build** - Maven compile and dependency resolution
-3. **Grid Setup** - Docker Compose up for Selenium Grid
-4. **Smoke Tests** - Quick sanity checks
-5. **Regression** - Full test suite execution
-6. **Reports** - Publish Extent + Allure results
-7. **Cleanup** - Container teardown
-
 ## Page Object Examples
 
 ```java
@@ -146,17 +112,9 @@ new LoginPage(driver)
 
 - **BasePage** - Generic page superclass with WebDriverWait utilities
 - **ThreadLocal Driver** - Safe parallel execution via DriverManager
-- **CSV Data Providers** - TestNG integration for DDT
+- **CSV Data Providers** - TestNG integration for data-driven testing
 - **Listeners** - Automatic screenshot capture and reporting hooks
 - **Config Management** - Centralized properties with system property override
-
-## Roadmap
-
-- [ ] REST API test coverage for backend services
-- [ ] Performance testing integration (JMeter/Gatling)
-- [ ] Visual regression testing (Percy/Applitools)
-- [ ] Expand data sources (Excel, Database)
-- [ ] Kubernetes deployment for Grid
 
 ## Target Application
 
