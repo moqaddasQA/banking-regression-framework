@@ -18,11 +18,23 @@ public abstract class BasePage<T extends BasePage<T>> {
   }
 
   protected WebElement waitForElement(By locator) {
-    return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    sleep(500); // Slow down for visual observation
+    return element;
   }
 
   protected WebElement waitForClickable(By locator) {
-    return wait.until(ExpectedConditions.elementToBeClickable(locator));
+    WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
+    sleep(500); // Slow down for visual observation
+    return element;
+  }
+
+  protected void sleep(long millis) {
+    try {
+      Thread.sleep(millis);
+    } catch (InterruptedException e) {
+      Thread.currentThread().interrupt();
+    }
   }
 
   public abstract boolean isLoaded();
