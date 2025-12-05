@@ -466,7 +466,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 <div align="center">
 
-**Moqaddas Rauf**
+**Moqaddas Rahim**
 
 SDET | QA Automation Engineer
 
@@ -531,7 +531,7 @@ Best Practices
 
 ### 🚀 Built with passion for quality automation
 
-**Made with ❤️ by [Moqaddas Rauf](https://github.com/moqaddasQA)**
+**Made with ❤️ by [Moqaddas Rahim](https://github.com/moqaddasQA)**
 
 <sub>Last Updated: December 2025</sub>
 
