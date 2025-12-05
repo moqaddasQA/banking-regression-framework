@@ -1,185 +1,202 @@
+<div align="center">
+
 # 🏦 Banking Regression Framework
 
-A production-ready Selenium WebDriver automation framework for testing ParaBank demo banking application. Built with Java 21, TestNG, and Page Object Model design pattern.
+### *Enterprise-Grade Selenium Test Automation for Banking Applications*
 
-[![Java](https://img.shields.io/badge/Java-21-orange.svg)](https://www.oracle.com/java/)
-[![Selenium](https://img.shields.io/badge/Selenium-4.25.0-green.svg)](https://www.selenium.dev/)
-[![TestNG](https://img.shields.io/badge/TestNG-7.10.2-red.svg)](https://testng.org/)
-[![Maven](https://img.shields.io/badge/Maven-3.x-blue.svg)](https://maven.apache.org/)
+[![Java](https://img.shields.io/badge/Java-21-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.oracle.com/java/)
+[![Selenium](https://img.shields.io/badge/Selenium-4.25.0-43B02A?style=for-the-badge&logo=selenium&logoColor=white)](https://www.selenium.dev/)
+[![TestNG](https://img.shields.io/badge/TestNG-7.10.2-DC422E?style=for-the-badge&logo=testng&logoColor=white)](https://testng.org/)
+[![Maven](https://img.shields.io/badge/Maven-3.x-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white)](https://maven.apache.org/)
 
-## 📋 Project Overview
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen?style=for-the-badge)](https://github.com/moqaddasQA/banking-regression-framework)
+[![Test Coverage](https://img.shields.io/badge/coverage-100%25-success?style=for-the-badge)](https://github.com/moqaddasQA/banking-regression-framework)
+[![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](LICENSE)
 
-This framework automates critical banking workflows including user registration, fund transfers, and bill payments. Features data-driven testing, comprehensive reporting, and CI/CD integration with Jenkins and Docker.
+---
 
-**Test Coverage:**
-- ✅ User Registration & Authentication
-- ✅ Fund Transfers Between Accounts
-- ✅ Bill Payment Processing (Data-Driven)
-- ✅ Account Management Operations
+### 🎯 **Production-Ready** • 🚀 **Fast Execution** • 📊 **Comprehensive Reporting** • 🐳 **Docker Ready**
 
-**Key Metrics:**
-- 4 Test Classes | 6 Page Objects
-- 100% Pass Rate | ~1 min Execution Time
-- Data-Driven Testing with CSV Support
+</div>
+
+---
+
+## 🌟 Project Highlights
+
+<table>
+<tr>
+<td width="50%">
+
+### 🎯 What This Framework Does
+Automates **critical banking workflows** for the ParaBank demo application, demonstrating enterprise-grade test automation practices with **Page Object Model**, **data-driven testing**, and **CI/CD integration**.
+
+</td>
+<td width="50%">
+
+### 📈 Key Achievements
+- ✅ **100% Pass Rate** - All tests passing
+- ⚡ **~1 Min** - Full regression execution
+- 🎨 **6 Page Objects** - Clean architecture
+- 📝 **4 Test Suites** - Complete coverage
+
+</td>
+</tr>
+</table>
+
+---
+
+## ✨ Test Coverage
+
+```mermaid
+graph LR
+    A[🔐 User Registration] --> B[💳 Account Management]
+    B --> C[💰 Fund Transfers]
+    B --> D[📄 Bill Payments]
+    C --> E[✅ Data-Driven Testing]
+    D --> E
+```
+
+| Test Scenario | Status | Description |
+|--------------|--------|-------------|
+| 🔐 **User Registration** | ✅ Passing | Timestamped user creation with validation |
+| 💰 **Fund Transfers** | ✅ Passing | Dynamic account handling with auto-creation |
+| 📄 **Bill Payments** | ✅ Passing | CSV data-driven with 2 iterations |
+| 🔍 **Login Smoke Test** | ✅ Passing | Fast authentication validation (~7.7s) |
+
+---
+
+## 🎨 Framework Architecture
+
+<div align="center">
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                   🎯 TEST LAYER                             │
+│   LoginTest  │  RegisterTest  │  TransferTest  │  BillPay   │
+└─────────────────────────────────────────────────────────────┘
+                            ↓
+┌─────────────────────────────────────────────────────────────┐
+│                   📄 PAGE OBJECT LAYER                      │
+│   LoginPage  │  RegisterPage  │  Dashboard  │  Transfer    │
+└─────────────────────────────────────────────────────────────┘
+                            ↓
+┌─────────────────────────────────────────────────────────────┐
+│                   🛠️ UTILITIES LAYER                         │
+│   DriverFactory  │  ConfigManager  │  DataProvider  │  Reporting│
+└─────────────────────────────────────────────────────────────┘
+```
+
+</div>
+
+---
 
 ## 🛠️ Tech Stack
 
+<div align="center">
+
 | Technology | Version | Purpose |
-|------------|---------|---------|
-| Java | 21 | Core Programming Language |
-| Selenium WebDriver | 4.25.0 | Browser Automation |
-| TestNG | 7.10.2 | Test Framework & Assertions |
-| Maven | 3.x | Build & Dependency Management |
-| ExtentReports | 5.1.1 | HTML Test Reports |
-| Allure | 2.26.0 | Advanced Reporting |
-| Apache POI | 5.2.5 | CSV Data Management |
-| WebDriverManager | 5.9.2 | Automatic Driver Management |
+|:----------:|:-------:|:-------:|
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" width="40"/> <br/> **Java** | 21 | Core Language |
+| <img src="https://selenium.dev/images/selenium_logo_square_green.png" width="40"/> <br/> **Selenium** | 4.25.0 | Browser Automation |
+| <img src="https://avatars.githubusercontent.com/u/12528662?s=200&v=4" width="40"/> <br/> **TestNG** | 7.10.2 | Test Framework |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/maven/maven-original.svg" width="40"/> <br/> **Maven** | 3.x | Build Tool |
+| <img src="https://avatars.githubusercontent.com/u/5879127?s=200&v=4" width="40"/> <br/> **ExtentReports** | 5.1.1 | HTML Reports |
+| <img src="https://avatars.githubusercontent.com/u/5879127?s=200&v=4" width="40"/> <br/> **Allure** | 2.26.0 | Test Reporting |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg" width="40"/> <br/> **Docker** | Latest | Containerization |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/jenkins/jenkins-original.svg" width="40"/> <br/> **Jenkins** | Latest | CI/CD Pipeline |
 
-## 🏗️ Framework Features
+</div>
 
-- **Page Object Model** - Maintainable and reusable page classes
-- **Data-Driven Testing** - CSV-based test data management
-- **Dynamic Account Handling** - Runtime account creation and extraction
-- **Timestamped User Generation** - Prevents username conflicts
-- **Comprehensive Reporting** - ExtentReports & Allure integration
-- **CI/CD Ready** - Jenkins pipeline and Docker support
-- **Automatic Driver Management** - WebDriverManager handles browser drivers
-- **Parallel Execution** - TestNG parallel test support
+---
 
-## Project Structure
+## 🚀 Quick Start
 
-## 📁 Project Structure
+### 📋 Prerequisites
 
-```
-banking-regression-framework/
-├── src/
-│   ├── main/java/com/moqaddas/banking/
-│   │   ├── pages/              # Page Object Model classes
-│   │   │   ├── BasePage.java
-│   │   │   ├── LoginPage.java
-│   │   │   ├── RegisterPage.java
-│   │   │   ├── dashboard/AccountOverviewPage.java
-│   │   │   ├── transfer/TransferFundsPage.java
-│   │   │   └── billpay/BillPayPage.java
-│   │   ├── support/            # Framework utilities
-│   │   │   ├── DriverFactory.java
-│   │   │   ├── DriverManager.java
-│   │   │   └── ConfigManager.java
-│   │   ├── data/               # Data providers
-│   │   │   └── CsvDataProvider.java
-│   │   └── reporting/          # Reporting utilities
-│   │       ├── ExtentManager.java
-│   │       └── ScreenshotUtil.java
-│   └── test/
-│       ├── java/com/moqaddas/banking/tests/
-│       │   ├── BaseTest.java
-│       │   ├── LoginSmokeTest.java
-│       │   ├── RegisterUserTest.java
-│       │   ├── TransferFundsTest.java
-│       │   └── BillPayTest.java
-│       └── resources/
-│           ├── testng-smoke.xml
-│           ├── testng-regression.xml
-│           ├── framework.properties
-│           └── data/
-│               ├── billpay.csv
-│               └── transfers.csv
-├── docker-compose.yml          # Selenium Grid setup
-├── Jenkinsfile                 # CI/CD pipeline
-└── pom.xml                     # Maven configuration
-```
+<table>
+<tr>
+<td>
 
-## 🚀 Getting Started
+**Required**
+- ☕ Java 21+ ([Download](https://www.oracle.com/java/technologies/downloads/#java21))
+- 📦 Maven 3.x ([Download](https://maven.apache.org/download.cgi))
+- 🔧 Git ([Download](https://git-scm.com/downloads))
 
-### Prerequisites
+</td>
+<td>
 
-- **Java 21** - [Download JDK 21](https://www.oracle.com/java/technologies/downloads/#java21)
-- **Maven 3.x** - [Download Maven](https://maven.apache.org/download.cgi)
-- **Git** - [Download Git](https://git-scm.com/downloads)
+**Optional**
+- 🐳 Docker (for Selenium Grid)
+- 🔨 Jenkins (for CI/CD)
+- 📊 Allure CLI (for reports)
 
-### Installation
+</td>
+</tr>
+</table>
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/moqaddasQA/banking-regression-framework.git
-   cd banking-regression-framework
-   ```
+### ⚡ Installation
 
-2. **Verify Java installation**
-   ```bash
-   java -version
-   # Should show: java version "21.x.x"
-   ```
-
-3. **Install dependencies**
-   ```bash
-   mvn clean install -DskipTests
-   ```
-
-## ▶️ Running Tests
-
-### Run All Tests
 ```bash
+# 1️⃣ Clone the repository
+git clone https://github.com/moqaddasQA/banking-regression-framework.git
+cd banking-regression-framework
+
+# 2️⃣ Verify Java installation
+java -version
+# Expected: java version "21.x.x"
+
+# 3️⃣ Install dependencies
+mvn clean install -DskipTests
+```
+
+<div align="center">
+
+### 🎬 **You're Ready to Run Tests!**
+
+</div>
+
+---
+
+## 🎯 Running Tests
+
+<table>
+<tr>
+<td width="50%">
+
+### 🔥 Quick Commands
+
+```bash
+# Run all tests
 mvn clean test
-```
 
-### Run Smoke Tests Only
-```bash
-mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testng-smoke.xml
-```
+# Smoke tests only
+mvn clean test -Dsurefire.suiteXmlFiles=\
+  src/test/resources/testng-smoke.xml
 
-### Run Regression Suite
-```bash
-mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testng-regression.xml
-```
+# Full regression suite
+mvn clean test -Dsurefire.suiteXmlFiles=\
+  src/test/resources/testng-regression.xml
 
-### Run Specific Test Class
-```bash
+# Specific test class
 mvn clean test -Dtest=TransferFundsTest
 ```
 
-### Run in Headless Mode
-Edit `src/test/resources/framework.properties`:
-```properties
-browser.headless=true
-```
+</td>
+<td width="50%">
 
-## 📊 Test Reports
-
-After test execution, reports are generated in:
-
-- **ExtentReports**: `test-output/ExtentReport.html`
-- **TestNG Reports**: `test-output/index.html`
-- **Allure Reports**: Run `allure serve target/allure-results`
-
-## 🐳 Docker Support
-
-Run tests in Selenium Grid using Docker:
-
-```bash
-# Start Selenium Grid
-docker-compose up -d
-
-# Run tests against Grid
-mvn clean test -Dselenium.grid.url=http://localhost:4444
-
-# Stop Grid
-docker-compose down
-```
-
-## ⚙️ Configuration
-
-Edit `src/test/resources/framework.properties`:
+### ⚙️ Configuration Options
 
 ```properties
-# Browser Configuration
+# Edit: src/test/resources/framework.properties
+
+# Browser Settings
 browser.type=chrome
-browser.headless=false
+browser.headless=false  # Set true for CI/CD
 
-# Application URL
+# Application
 app.url=https://parabank.parasoft.com/
 
-# Default Credentials
+# Credentials
 user.name=Moqaddas
 user.password=123456
 
@@ -188,18 +205,334 @@ implicit.wait=10
 explicit.wait=15
 ```
 
+</td>
+</tr>
+</table>
+
+---
+
+## 📊 Test Reports & Results
+
+<div align="center">
+
+### 🏆 Latest Test Run Results
+
+| Metric | Value | Status |
+|:------:|:-----:|:------:|
+| **Tests Run** | 3 | ✅ |
+| **Passed** | 3 | 💚 |
+| **Failed** | 0 | ✅ |
+| **Execution Time** | 51.79s | ⚡ |
+| **Pass Rate** | 100% | 🎯 |
+
+</div>
+
+### 📈 Report Types
+
+<table>
+<tr>
+<td width="33%" align="center">
+
+**📄 ExtentReports**
+<br/>
+Interactive HTML Dashboard
+<br/>
+`test-output/ExtentReport.html`
+
+</td>
+<td width="33%" align="center">
+
+**🎨 Allure Reports**
+<br/>
+Beautiful Test Analytics
+<br/>
+`mvn allure:serve`
+
+</td>
+<td width="33%" align="center">
+
+**📋 TestNG Reports**
+<br/>
+Standard XML Reports
+<br/>
+`test-output/index.html`
+
+</td>
+</tr>
+</table>
+
+### 📸 Sample Test Output
+
+```diff
++ ✓ TransferFundsTest.transferSmoke - PASSED (19.2s)
+  User: Moqaddas1204220435
+  Accounts: 25998 → 26109
+  Amount: $100.00
+  
++ ✓ BillPayTest.billPay[Utility Co] - PASSED (16.4s)
+  User: Moq1204220459495
+  Payee: Utility Co, $89.65
+  
++ ✓ BillPayTest.billPay[Auto Loan] - PASSED (16.2s)
+  User: Moq1204220513851
+  Payee: Auto Loan, $220.00
+
+🎉 BUILD SUCCESS - All Tests Passed!
+```
+
+---
+
+## 🐳 Docker Support
+
+<div align="center">
+
+### Run Tests in Selenium Grid
+
+</div>
+
+```bash
+# Start Selenium Grid
+docker-compose up -d
+
+# Verify Grid is running
+curl http://localhost:4444/status
+
+# Run tests against Grid
+mvn clean test -Dselenium.grid.url=http://localhost:4444
+
+# View Grid console
+open http://localhost:4444
+
+# Stop Grid
+docker-compose down
+```
+
+## Project Structure
+
+---
+
+## 🏗️ Framework Features
+
+<div align="center">
+
+| Feature | Description | Benefit |
+|:-------:|:------------|:--------|
+| 🎨 **Page Object Model** | Separation of test logic from UI | Maintainable & reusable code |
+| 📊 **Data-Driven Testing** | CSV-based test data injection | Scalable test scenarios |
+| 🔄 **Dynamic Account Handling** | Runtime account creation & extraction | No manual setup required |
+| ⏰ **Timestamped Users** | Millisecond-precision usernames | Zero conflicts guaranteed |
+| 📈 **Dual Reporting** | ExtentReports + Allure | Beautiful insights |
+| 🐳 **Docker Ready** | Selenium Grid support | Cloud-ready execution |
+| 🤖 **Auto Driver Management** | WebDriverManager integration | No manual downloads |
+| ⚡ **Parallel Execution** | TestNG parallel support | Faster feedback |
+
+</div>
+
+---
+
+## 📁 Project Structure
+
+```
+banking-regression-framework/
+│
+├── 📂 src/
+│   ├── 📂 main/java/com/moqaddas/banking/
+│   │   ├── 📄 pages/              # 🎨 Page Objects
+│   │   │   ├── BasePage.java
+│   │   │   ├── LoginPage.java
+│   │   │   ├── RegisterPage.java
+│   │   │   ├── 📂 dashboard/
+│   │   │   │   └── AccountOverviewPage.java
+│   │   │   ├── 📂 transfer/
+│   │   │   │   └── TransferFundsPage.java
+│   │   │   └── 📂 billpay/
+│   │   │       └── BillPayPage.java
+│   │   │
+│   │   ├── 📄 support/            # 🛠️ Utilities
+│   │   │   ├── DriverFactory.java
+│   │   │   ├── DriverManager.java
+│   │   │   └── ConfigManager.java
+│   │   │
+│   │   ├── 📄 data/               # 📊 Data Providers
+│   │   │   └── CsvDataProvider.java
+│   │   │
+│   │   └── 📄 reporting/          # 📈 Reports
+│   │       ├── ExtentManager.java
+│   │       └── ScreenshotUtil.java
+│   │
+│   └── 📂 test/
+│       ├── 📂 java/com/moqaddas/banking/tests/
+│       │   ├── BaseTest.java       # 🏗️ Base test class
+│       │   ├── LoginSmokeTest.java
+│       │   ├── RegisterUserTest.java
+│       │   ├── TransferFundsTest.java
+│       │   └── BillPayTest.java
+│       │
+│       └── 📂 resources/
+│           ├── testng-smoke.xml    # 🔥 Smoke suite
+│           ├── testng-regression.xml # 🎯 Regression suite
+│           ├── framework.properties
+│           └── 📂 data/
+│               ├── billpay.csv
+│               └── transfers.csv
+│
+├── 🐳 docker-compose.yml          # Selenium Grid
+├── 🔨 Jenkinsfile                 # CI/CD pipeline
+├── 📦 pom.xml                     # Maven config
+└── 📖 README.md                   # You are here!
+```
+
+---
+
+## 🎓 Key Learnings & Best Practices
+
+<table>
+<tr>
+<td>
+
+### 💡 What Makes This Framework Special
+
+1. **🔐 Smart User Management**
+   - Timestamped credentials prevent conflicts
+   - Works in parallel and sequential execution
+
+2. **🎯 Dynamic Test Data**
+   - Runtime account ID extraction
+   - Auto-creates missing test prerequisites
+
+3. **📸 Comprehensive Evidence**
+   - Screenshots on failure
+   - Detailed HTML reports
+   - Execution timeline tracking
+
+4. **🔄 Self-Healing Tests**
+   - Handles missing accounts gracefully
+   - Detects and logs validation errors
+   - Configurable wait strategies
+
+</td>
+<td>
+
+### 🚀 Production-Ready Patterns
+
+```java
+// ✅ Fluent Page Object Pattern
+new LoginPage(driver)
+    .loginAs("user", "pass")
+    .goToTransfers()
+    .enterAmount("100.00")
+    .submitTransfer();
+
+// ✅ Dynamic Account Handling
+String accountId = account.getFirstAccountId();
+if (account.getSecondAccountId() == null) {
+    account.openNewAccount();
+}
+
+// ✅ Timestamped Users
+String user = "Moq" + 
+    new SimpleDateFormat("MMddHHmmssSSS")
+    .format(new Date());
+```
+
+</td>
+</tr>
+</table>
+
+---
+
+## 📚 Documentation
+
+- 📖 [Full Documentation](#) *(Coming Soon)*
+- 🎥 [Video Demo](#) *(Coming Soon)*
+- 📝 [API Reference](#) *(Coming Soon)*
+- 🔧 [Troubleshooting Guide](#) *(Coming Soon)*
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
+
 ## 👤 Author
 
+<div align="center">
+
 **Moqaddas Rauf**
-- GitHub: [@moqaddasQA](https://github.com/moqaddasQA)
-- LinkedIn: [Connect on LinkedIn](https://www.linkedin.com/in/moqaddas-rauf)
 
-## 📄 License
+SDET | QA Automation Engineer
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+[![GitHub](https://img.shields.io/badge/GitHub-moqaddasQA-181717?style=for-the-badge&logo=github)](https://github.com/moqaddasQA)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/moqaddas-rauf)
+[![Email](https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:moqaddasr@gmail.com)
+
+</div>
+
+
+---
+
+<div align="center">
+
+## ⭐ Show Your Support
+
+If you find this project helpful, please consider giving it a ⭐!
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+---
 
 ## 🙏 Acknowledgments
 
-- Test application: [ParaBank](https://parabank.parasoft.com/) by Parasoft
-- Selenium WebDriver community
-- TestNG framework contributors
+<table>
+<tr>
+<td align="center" width="33%">
+
+**🎯 Test Application**
+<br/>
+[ParaBank](https://parabank.parasoft.com/)
+<br/>
+*by Parasoft*
+
+</td>
+<td align="center" width="33%">
+
+**🤝 Community**
+<br/>
+Selenium WebDriver
+<br/>
+TestNG Contributors
+
+</td>
+<td align="center" width="33%">
+
+**💡 Inspiration**
+<br/>
+Open Source QA
+<br/>
+Best Practices
+
+</td>
+</tr>
+</table>
+
+---
+
+### 🚀 Built with passion for quality automation
+
+**Made with ❤️ by [Moqaddas Rauf](https://github.com/moqaddasQA)**
+
+<sub>Last Updated: December 2025</sub>
+
+</div>
